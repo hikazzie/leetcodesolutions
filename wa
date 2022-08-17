@@ -1,0 +1,29 @@
+        if n == 1:
+            return "1"
+        elif n == 2:
+            return "11"
+        elif n == 3:
+            return "21"
+        
+        answer = ""
+        
+        prevstring = "1211"
+        
+        for i in range(n-4):
+            index = 0
+            freq = 1
+            while index+2 != len(prevstring):
+                if prevstring[index] != prevstring[index+1]:
+                    if freq >1:
+                        (str(freq)).join(answer)
+                        prevstring[index].join(answer)
+                        print(answer)
+                    else:
+                        ("1").join(answer) 
+                        (prevstring[index]).join(answer)
+                        print(answer)
+                else:
+                    freq = freq + 1
+            index +=1
+            
+        print(answer)
