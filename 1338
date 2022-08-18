@@ -1,0 +1,27 @@
+
+        class Solution:
+    def minSetSize(self, arr: List[int]) -> int:
+        
+        n = len(arr)
+        half = n//2
+        counter = 1
+        count = collections.Counter(arr)
+        #print(count)
+        
+        order = list(count.values())
+        
+        order.sort(reverse=True)
+        
+        #print(order)
+        
+        freq = order[0]
+        
+        while freq < half:
+            freq = freq + order[counter]
+            counter = counter+1
+        return counter 
+            
+            
+        
+
+        
